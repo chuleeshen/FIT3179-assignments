@@ -1,0 +1,37 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Malaria Incidence Per 1000 Population At Risk",
+    "width": 800,
+    "height": 600,
+    "projection": {"type": "equirectangular"},
+    "data": {
+      "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week9/js/all_countries.topojson?token=AM6II65ZI54RK4WEOFTRBATBLAWMQ",
+      "format": {
+            "type": "topojson",
+            "feature": "all_countries"
+        }
+    },
+    "transform": [{
+        "lookup": "properties.name",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week9/data/incedenceOfMalaria.csv?token=AM6II62XRN47N6F3LJZ2ZLLBLAUZW"
+          },
+          "key": "Location",
+          "fields": ["Tooltip"]
+        }
+      }
+    ],
+    "mark": {"type": "geoshape"},
+    "encoding": {
+      "color": {
+        "field": "Tooltip",
+        "type": "quantitative"
+      },
+      "tooltip": [
+        {"field": "properties.NAME", "type": "nominal", "title": "Location"},
+        {"field": "Tooltip", "type": "quantitative", "title": "Number of Incidence"}
+      ]
+    }
+  
+}
