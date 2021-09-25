@@ -1,11 +1,15 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Malaria Incidence Per 1000 Population At Risk",
+    "title": "Malaria Incidence At Risk 2018",
     "width": 800,
     "height": 600,
-    "projection": {"type": "equalEarth"},
+    "projection": {
+        "type": "equirectangular",
+        "center": [10, 12],
+        "rotate": [-10, 0, 0]
+    },
     "data": {
-      "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week9/js/all_countries.topo.json?token=AM6II664KNZDC7EW2K6JQPLBLBMES",
+      "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week9/js/all_countries.topo.json",
       "format": {
             "type": "topojson",
             "feature": "all_countries.geo"
@@ -29,7 +33,7 @@
                 "lookup": "properties.name",
                 "from": {
                     "data": {
-                        "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week9/data/incidenceOfMalaria2018.csv?token=AM6II6ZG3VHAG2QO2JROFGDBLBMUI"
+                        "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week9/data/incidenceOfMalaria2018.csv"
                     },
                     "key": "Location",
                     "fields": ["Tooltip"]
@@ -43,16 +47,22 @@
                     "type": "quantitative",
                     "scale": {
                         "type": "threshold",
-                        "domain": [10, 20, 30, 40],
-                        "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
-                    }
+                        "domain": [40, 80, 120, 160, 200, 240],
+                        "range": ["#edf8b1", "#c7e9b4", "#7fcdbb","#41b6c4", "#1d91c0", "#225ea8", "#253494", "#081d58"]
+                    },
+                    "title": "Incidence Per 1000 Population"
                 },
                 "tooltip": [
-                    {"field": "properties.NAME", "type": "nominal", "title": "Location"},
+                    {"field": "properties.name", "type": "nominal", "title": "Location"},
                     {"field": "Tooltip", "type": "quantitative", "title": "Number of Incidence"}
                 ]
             }
         }
-    ]
+    ],
+    "config": {
+        "legend": {
+            "labelAlign": "left"
+        }
+    }
   
 }
