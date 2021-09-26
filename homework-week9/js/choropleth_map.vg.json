@@ -33,18 +33,17 @@
                 "lookup": "properties.name",
                 "from": {
                     "data": {
-                        "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week9/data/incidenceOfMalaria.csv"
+                        "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week9/data/incidenceOfMalaria2018.csv"
                     },
                     "key": "Location",
-                    "fields": ["First Tooltip", "Period"]
+                    "fields": ["Tooltip"]
                 }
                 
-            },
-            {"filter": "datum.Period == 2018"}],
+            }],
             "mark": {"type": "geoshape"},
             "encoding": {
                 "color": {
-                    "field": "First Tooltip",
+                    "field": "Tooltip",
                     "type": "quantitative",
                     "scale": {
                         "type": "threshold",
@@ -55,7 +54,7 @@
                 },
                 "tooltip": [
                     {"field": "properties.name", "type": "nominal", "title": "Location"},
-                    {"field": "First Tooltip", "type": "quantitative", "title": "Number of Incidence"}
+                    {"field": "Tooltip", "type": "quantitative", "title": "Number of Incidence"}
                 ]
             }
         }
