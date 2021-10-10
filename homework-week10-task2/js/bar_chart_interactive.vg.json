@@ -1,0 +1,60 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 600,
+    "title": "Reported Number Of People Requiring Interventions Against NTDs Per Country 2018",
+    "data": {
+      "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week10/data/interventionAgainstNTDs2018.csv"
+    },
+    "params": [
+      {
+        "name": "People_Num_Above",
+        "value": 30000000,
+        "bind": {
+          "input": "range",
+          "min": 7000000,
+          "max": 100000000,
+          "step": 1000000,
+          "name": "Minimum Reported Number of People: "
+        }
+      }
+    ],
+    "encoding": {
+        "y": { 
+          "field": "Location", 
+          "type": "nominal", 
+          "sort": {"field": "Tooltip", "op": "average", "order": "descending"},
+          "title": "Country"},
+        "x": { 
+          "field": "Tooltip", 
+          "type": "quantitative", 
+          "title": "Reported Number of People",
+          "axis": {"tickCount": 7}},
+        "tooltip": [
+          {"field": "Location", "type": "nominal", "title": "Country"}, 
+          {"field": "Tooltip", "type": "quantitative", "title": "Number of People", "format": ","}
+        ]
+    },
+    "transform": [
+      {"filter": "datum.Tooltip >= People_Num_Above"}
+    ],
+    "layer": [{
+      "mark": "bar",
+      "encoding": {
+        "color": {
+          "value": "#add8e6"
+        }
+      }
+    }, {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 3
+      },
+      "encoding": {
+        "text": {"field": "Tooltip", "type": "quantitative", "format": ","},
+        "color": {"value": "black"}
+      }
+    }]
+}
