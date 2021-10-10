@@ -8,7 +8,7 @@
         "rotate": [-10, 0, 0]
     },
     "data": {
-      "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week9/js/all_countries.topo.json",
+      "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week10-task2/js/all_countries.topo.json",
       "format": {
             "type": "topojson",
             "feature": "all_countries.geo"
@@ -32,7 +32,7 @@
                 "lookup": "properties.name",
                 "from": {
                     "data": {
-                        "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week9/data/incidenceOfMalaria2018.csv"
+                        "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week10-task2/data/incidenceOfMalaria2018.csv"
                     },
                     "key": "Location",
                     "fields": ["Tooltip"]

@@ -3,7 +3,7 @@
     "width": "container",
     "title": "Reported Number Of People Requiring Interventions Against NTDs Per Country 2018",
     "data": {
-      "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week10-task1/data/interventionAgainstNTDs2018.csv"
+      "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/homework-week10-task2/data/interventionAgainstNTDs2018.csv"
     },
     "params": [
       {
