@@ -1,0 +1,94 @@
+{
+
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "title": {	"text": "Reported Number Of People Requiring Interventions Against NTDs",
+                            "color": "navy",
+                "fontSize": 22 ,
+                            "align": "center",
+                            "anchor": "middle",
+                            "dy": -1,
+                "baseline": "middle"
+    },
+    "data": {
+        "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/data-vis-2/data/interventionAgainstNTDs.csv"
+    },
+    "params": [
+        { 
+            "name": "top_countries", 
+            "value": 3,
+            "bind": {
+                "input": "range", 
+                "min": 1, 
+                "max": 5, 
+                "step": 1,
+                "name": "Top Countries: "
+            }
+        }
+    ],
+
+    "transform": [{
+    "sort": [
+        {"field": "Tooltip", "order": "descending"}
+        ],
+        "window": [{
+            "op": "rank",
+            "as": "rank"
+        }],
+        "groupby": [ "Period"],
+        "ignorePeers": true
+        },
+            { "filter": "datum.rank <= top_countries" }
+        ],
+
+        "encoding": {
+            "x": {  
+                "field": "Period",
+                "type": "ordinal" ,
+                "sort": ["2010","2011","2012","2013","2014","2015","2016","2017","2018"] ,
+                "axis": { "labelAngle": 0 , "labelFontSize": 12 , "titleFontSize": 14},
+                "title": "Year"
+            } ,
+            "y": {  
+                "field": "rank",
+                "type": "quantitative",
+                "sort": "descending",
+                "scale": {"domain": [0.5, {"expr": "top_countries+0.5"} ]},
+                "axis": { "labelAngle": 0 , "labelFontSize": 12 , "tickMinStep": 1 , "tickCount": {"expr": "top_countries"}, "titleFontSize": 14 },
+                "title":  "Countries Ranking"
+            },
+            "tooltip": [
+                {"field": "Location", "type": "nominal", "title": "Country"}, 
+                {"field": "Tooltip", "type": "quantitative", "title": "Number of People", "format": ","}
+            ]
+        } ,
+
+    "layer": [{
+        "mark": {"type": "line", "interpolate": "monotone" },
+        "encoding": {
+            "color": { "field": "Location" } ,
+            "size":{
+                "condition":  {"param": "country_legend", "empty": false, "value": 3},
+                "value": 1
+            }
+        }
+    },
+    {
+        "params": [{ 
+            "name": "country_legend", "select": {"type": "point" ,  "on": "click",  "fields": ["Location"]},
+            "bind": "legend"
+        }
+    ],
+        "mark": {"type" :"tick", "thickness": 5 },
+        "encoding": {
+            "color": {
+                "condition":  {"param": "country_legend", "empty": false, "value": "black"} ,
+                "field": "Location",
+                "legend": {"columns": 2}
+            }
+        }
+
+    }
+]
+    
+}
