@@ -6,7 +6,6 @@ h1 {
 
 body {
     background-color: #ffdfdb;
-    font-family: 'Open Sans';
 }
 
 .page {
@@ -15,6 +14,7 @@ body {
     margin: auto;
     padding: 50px;
     padding-top: 35px;
+    font-family: 'Open Sans';
 }
 
 .vis-container {
