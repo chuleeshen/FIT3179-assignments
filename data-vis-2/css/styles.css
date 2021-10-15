@@ -54,8 +54,8 @@ h1 {
 }
 
 .description {
+    text-align: justify;
     font-family: 'Open Sans', sans-serif;
-    align-items: center;
 }
 
 strong {
@@ -77,4 +77,8 @@ strong {
     height: 5px;
     width: 50vw;
     margin: 10px;
-  }
+}
+
+.center {
+    align-items: center;
+}
