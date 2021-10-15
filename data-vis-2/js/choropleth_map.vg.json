@@ -84,7 +84,7 @@
                 }
               },
               "tooltip": [
-                {"field": "Location", "type": "nominal", "title": "Location"},
+                {"field": "Location", "type": "nominal", "title": "Country"},
                 {"field": "Tooltip", "type": "quantitative", "title": "Incidence"}
             ]
             }

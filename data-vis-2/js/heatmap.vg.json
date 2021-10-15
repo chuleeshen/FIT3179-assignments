@@ -50,6 +50,8 @@
             "scale":{"scheme": "magma", "reverse": true}
         },
         "tooltip": [
+            {"field": "Gender", "type": "nominal", "title": "Gender"},
+            {"field": "Period", "type": "ordinal", "title": "Year"},
             {"field": "gender_mean", "type": "quantitative", "title": "Mean"}
         ]
     },
