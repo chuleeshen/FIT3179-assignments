@@ -40,7 +40,11 @@
             "field": "gender_mean",
             "type": "quantitative",
             "legend": {
-                "title": "Mean Per 1000 Uninfected Population"
+                "title": "Mean Per 1000 Uninfected Population",
+                "direction": "horizontal",
+                "orient": "none",
+                "legendX": -35,
+                "legendY": 450
             },
             "scale":{"scheme": "magma", "reverse": true}
         }
@@ -52,9 +56,6 @@
         },
         "axis": {
             "domain": false
-        },
-        "legend": {
-            "titleAlign": "center"
         }
     }
 }
