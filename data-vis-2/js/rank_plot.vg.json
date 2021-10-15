@@ -82,7 +82,7 @@
             "color": {
                 "condition":  {"param": "country_legend", "empty": false, "value": "black"} ,
                 "field": "Location",
-                "legend": {"columns": 2}
+                "legend": {"columns": 3}
             }
         }
 
