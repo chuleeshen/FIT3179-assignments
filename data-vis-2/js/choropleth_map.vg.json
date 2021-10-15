@@ -5,7 +5,6 @@
   "fontSize": 16,
               "align": "center",
               "anchor": "middle",
-              "dx": -30,
               "dy": -1,
   "baseline": "middle"
   },
@@ -78,8 +77,7 @@
                 "title": "Incidence Per 1000 Population",
                 "legend": {
                   "direction": "horizontal",
-                  "orient": "bottom-left",
-                  "offset": -45
+                  "orient": "bottom-left"
                 }
               },
               "tooltip": [
