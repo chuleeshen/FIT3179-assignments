@@ -20,7 +20,11 @@ body {
 }
 
 .r-plot {
-    height: 400;
+    height: 500px;
+}
+
+.s-graph {
+    height: 250px;
 }
 
 .description h2,

@@ -79,7 +79,7 @@
                   "direction": "horizontal",
                   "orient": "none",
                   "legendX": -35,
-                  "legendY": 300
+                  "legendY": 250
                 }
               },
               "tooltip": [
