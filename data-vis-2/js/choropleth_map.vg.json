@@ -78,8 +78,8 @@
                 "legend": {
                   "direction": "horizontal",
                   "orient": "none",
-                  "legendX": -35,
-                  "legendY": 225
+                  "legendX": 275,
+                  "legendY": 220
                 }
               },
               "tooltip": [
