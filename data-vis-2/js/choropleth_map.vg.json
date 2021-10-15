@@ -77,7 +77,8 @@
                 "title": "Incidence Per 1000 Population",
                 "legend": {
                   "direction": "horizontal",
-                  "orient": "bottom-left"
+                  "orient": "bottom-left",
+                  "offset": -30
                 }
               },
               "tooltip": [
