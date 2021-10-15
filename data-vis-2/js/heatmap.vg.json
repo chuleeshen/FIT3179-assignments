@@ -41,6 +41,7 @@
             "type": "quantitative",
             "legend": {
                 "title": "Mean Per 1000 Uninfected Population",
+                "titleLimit": 200,
                 "direction": "horizontal",
                 "orient": "none",
                 "legendX": -35,
@@ -56,6 +57,9 @@
         },
         "axis": {
             "domain": false
+        },
+        "legend": {
+            "gradientHorizontalMinLength": 160
         }
     }
 }
