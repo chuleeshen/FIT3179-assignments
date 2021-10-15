@@ -9,7 +9,7 @@ body {
 }
 
 .page {
-    width: 1000px;
+    width: 1200px;
     background-color: white;
     margin: auto;
     padding: 50px;
@@ -25,7 +25,7 @@ body {
 }
 
 .s-graph {
-    height: 200px;
+    height: 300px;
 }
 
 .description h2,
