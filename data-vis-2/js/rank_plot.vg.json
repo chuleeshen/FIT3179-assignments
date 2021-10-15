@@ -64,7 +64,7 @@
     "layer": [{
         "mark": {"type": "line", "interpolate": "monotone" },
         "encoding": {
-            "color": { "field": "Location", "scale":{"scheme": "category20b"}} ,
+            "color": { "field": "Location", "scale":{"scheme": "tableau20"}} ,
             "size":{
                 "condition":  {"param": "country_legend", "empty": false, "value": 3},
                 "value": 1

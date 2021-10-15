@@ -12,7 +12,7 @@
           "filled": true
         }
     },
-    "width": {"step": 200},
+    "width": "container",
     "encoding": {
       "x": {
         "field": "Period",
@@ -23,7 +23,7 @@
         "field": "Tooltip",
         "type": "quantitative"
       },
-      "color": {"field": "Location", "type": "nominal", "scale":{"scheme": "category20b"}},
+      "color": {"field": "Location", "type": "nominal", "scale":{"scheme": "magma"}},
       "tooltip": [
         {"field": "Location", "type": "nominal", "title": "Country"}, 
         {"field": "Tooltip", "type": "quantitative", "title": "Incidence"}
