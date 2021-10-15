@@ -1,7 +1,7 @@
 h1 {
     font-weight: 900;
     color: #881000;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -14,7 +14,6 @@ body {
     margin: auto;
     padding: 50px;
     padding-top: 35px;
-    font-family: 'Open Sans';
 }
 
 .vis-container {
@@ -56,10 +55,12 @@ h1 {
 
 .title p {
     font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .description {
     text-align: justify;
+    font-family: 'Open Sans', sans-serif;
 }
 
 strong {
@@ -71,7 +72,7 @@ strong {
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
 }
 
 .hr-line::after, .hr-line::before {
