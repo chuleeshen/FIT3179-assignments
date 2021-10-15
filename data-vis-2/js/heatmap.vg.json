@@ -1,10 +1,17 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
+    "height": 400,
+    "title": {	"text": "Mean Of New HIV Infections (Per 1000 Uninfected Population) In Countries",
+    "fontSize": 16,
+                "align": "center",
+                "anchor": "middle",
+                "dy": -1,
+    "baseline": "middle"
+    },
     "data": {
         "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/data-vis-2/data/newHivInfections.csv"
     },
-    "title": "New HIV Infections",
     "transform": [
         {"filter": "(datum.Tooltip != '<0.01') || (datum.Tooltip != 'No data')"},
         {

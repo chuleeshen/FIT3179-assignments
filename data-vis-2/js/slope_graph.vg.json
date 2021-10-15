@@ -1,6 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {"url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/data-vis-2/data/incedenceOfTuberculosis.csv"},
+    "title": {	"text": "Change In Tuberculosis Incidence From Year 2000 To Year 2019",
+    "fontSize": 16,
+                "align": "center",
+                "anchor": "middle",
+                "dy": -1,
+    "baseline": "middle"
+    },
     "transform": [
         {
           "filter": "datum.Location == 'India' || datum.Location == 'Indonesia' || datum.Location == 'China' || datum.Location == 'Philippines' || datum.Location == 'Pakistan' || datum.Location == 'Nigeria' || datum.Location == 'South Africa'"
@@ -13,6 +20,7 @@
         }
     },
     "width": "container",
+    "height": 400,
     "encoding": {
       "x": {
         "field": "Period",
@@ -21,9 +29,10 @@
       },
       "y": {
         "field": "Tooltip",
-        "type": "quantitative"
+        "type": "quantitative",
+        "title": "Incidence of Tuberculosis Per 100,000 Population"
       },
-      "color": {"field": "Location", "type": "nominal", "scale":{"scheme": "magma"}},
+      "color": {"field": "Location", "type": "nominal", "scale":{"scheme": "magma"}, "title": "Country"},
       "tooltip": [
         {"field": "Location", "type": "nominal", "title": "Country"}, 
         {"field": "Tooltip", "type": "quantitative", "title": "Incidence"}
