@@ -71,7 +71,7 @@
                 "type":"quantitative",
                 "scale": {
                     "type": "threshold",
-                    "domain": [0, 40, 80, 120, 160, 200, 240],
+                    "domain": [40, 80, 120, 160, 200, 240],
                     "scheme": "magma",
                     "reverse": true
                 },
