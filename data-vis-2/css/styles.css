@@ -1,14 +1,16 @@
 h1 {
     font-weight: 900;
     color: #881000;
+    font-family: 'Poppins';
 }
 
 body {
     background-color: #ffdfdb;
+    font-family: 'Open Sans';
 }
 
 .page {
-    width: 950px;
+    width: 1000px;
     background-color: white;
     margin: auto;
     padding: 50px;
@@ -69,6 +71,7 @@ strong {
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    font-family: 'Poppins';
 }
 
 .hr-line::after, .hr-line::before {
