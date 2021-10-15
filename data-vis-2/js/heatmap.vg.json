@@ -48,7 +48,10 @@
                 "legendY": 450
             },
             "scale":{"scheme": "magma", "reverse": true}
-        }
+        },
+        "tooltip": [
+            {"field": "gender_mean", "type": "quantitative", "title": "Mean"}
+        ]
     },
     "config": {
         "view": {
