@@ -53,6 +53,7 @@ h1 {
 .title {
     text-align: center;
     background-color: #881000;
+    padding: 50px;
 }
 
 .title p {
