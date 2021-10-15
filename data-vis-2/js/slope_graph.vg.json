@@ -1,0 +1,32 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/data-vis-2/data/incedenceOfTuberculosis.csv"},
+    "transform": [
+        {
+          "filter": "datum.Location == 'India' || datum.Location == 'Indonesia' || datum.Location == 'China' || datum.Location == 'Philippines' || datum.Location == 'Pakistan' || datum.Location == 'Nigeria' || datum.Location == 'South Africa'"
+        }
+    ],
+    "mark": {
+        "type": "line",
+        "point": {
+          "filled": true
+        }
+    },
+    "width": {"step": 200},
+    "encoding": {
+      "x": {
+        "field": "Period",
+        "type": "ordinal",
+        "scale": {"padding": 0.5}
+      },
+      "y": {
+        "field": "Tooltip",
+        "type": "quantitative"
+      },
+      "color": {"field": "Location", "type": "nominal", "scale":{"scheme": "category20b"}},
+      "tooltip": [
+        {"field": "Location", "type": "nominal", "title": "Country"}, 
+        {"field": "Tooltip", "type": "quantitative", "title": "Incidence"}
+    ]
+    }
+}

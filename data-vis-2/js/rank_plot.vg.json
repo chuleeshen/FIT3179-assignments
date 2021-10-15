@@ -44,7 +44,7 @@
             "x": {  
                 "field": "Period",
                 "type": "ordinal" ,
-                "sort": ["2010","2011","2012","2013","2014","2015","2016","2017","2018"] ,
+                "sort": ["2010","2011","2012","2013","2014","2015","2016","2017","2018"],
                 "axis": { "labelAngle": 0 , "labelFontSize": 12 , "titleFontSize": 14},
                 "title": "Year"
             } ,
@@ -65,7 +65,7 @@
     "layer": [{
         "mark": {"type": "line", "interpolate": "monotone" },
         "encoding": {
-            "color": { "field": "Location" } ,
+            "color": { "field": "Location", "scale":{"scheme": "category20b"}} ,
             "size":{
                 "condition":  {"param": "country_legend", "empty": false, "value": 3},
                 "value": 1

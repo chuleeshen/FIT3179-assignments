@@ -64,13 +64,14 @@
                   "scale": {
                       "type": "threshold",
                       "domain": [40, 80, 120, 160, 200, 240],
-                      "range": ["#edf8b1", "#c7e9b4", "#7fcdbb","#41b6c4", "#1d91c0", "#225ea8", "#253494", "#081d58"]
+                      "scheme": "magma",
+                      "reverse": true
                   },
                   "title": "Incidence Per 1000 Population"
                 },
                 "tooltip": [
                   {"field": "Location", "type": "nominal", "title": "Location"},
-                  {"field": "Tooltip", "type": "quantitative", "title": "Number of Incidence"}
+                  {"field": "Tooltip", "type": "quantitative", "title": "Incidence"}
               ]
               }
         }]

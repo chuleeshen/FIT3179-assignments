@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "data": {
+        "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/data-vis-2/data/newHivInfections.csv"
+    },
+    "title": "New HIV Infections",
+    "transform": [
+        {"filter": "(datum.Tooltip != '<0.01') || (datum.Tooltip != 'No data')"},
+        {
+            "window": [{
+                "op": "mean",
+                "field": "Tooltip",
+                "as": "gender_mean"
+            }],
+            "groupby": ["Period", "Gender"]
+        }
+    ],
+    "mark": "rect",
+    "encoding": {
+        "x": {
+            "field": "Period",
+            "type": "ordinal",
+            "sort": ["2000","2005","2010","2015","2019"] ,
+            "title": "Year"
+        },
+        "y": {
+            "field": "Gender",
+            "type": "nominal",
+            "title": "Gender"
+        },
+        "color": {
+            "field": "gender_mean",
+            "type": "quantitative",
+            "legend": {
+                "title": null
+            },
+            "scale":{"scheme": "magma", "reverse": true}
+        }
+    },
+    "config": {
+        "view": {
+            "strokeWidth": 0,
+            "step": 13
+        },
+        "axis": {
+            "domain": false
+        }
+    }
+}
+  
