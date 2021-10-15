@@ -50,3 +50,7 @@ h1 {
 .description {
     text-align: justify;
 }
+
+strong {
+    color: #ff6d5b;
+}
