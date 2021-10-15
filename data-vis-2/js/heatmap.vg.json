@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "container",
     "height": 400,
-    "title": {	"text": "Mean Of New HIV Infections (Per 1000 Uninfected Population) In Countries",
+    "title": {	"text": "Mean Of New HIV Infections For All Countries",
     "fontSize": 16,
                 "align": "center",
                 "anchor": "middle",
@@ -40,7 +40,9 @@
             "field": "gender_mean",
             "type": "quantitative",
             "legend": {
-                "title": null
+                "title": "Mean Of New HIV Infections Per 1000 Uninfected Population",
+                "direction": "horizontal",
+                "orient": "bottom-left"
             },
             "scale":{"scheme": "magma", "reverse": true}
         }
