@@ -78,7 +78,7 @@
                 "legend": {
                   "direction": "horizontal",
                   "orient": "bottom-left",
-                  "offset": -30
+                  "offset": -40
                 }
               },
               "tooltip": [
