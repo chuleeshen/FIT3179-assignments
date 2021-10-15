@@ -1,6 +1,6 @@
 h1 {
     font-weight: 900;
-    color: #881000;
+    color: white;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -52,11 +52,13 @@ h1 {
 
 .title {
     text-align: center;
+    background-color: #881000;
 }
 
 .title p {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
+    color: #ffdfdb;
 }
 
 .description {
