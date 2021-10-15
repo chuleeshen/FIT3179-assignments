@@ -40,7 +40,7 @@
             "field": "gender_mean",
             "type": "quantitative",
             "legend": {
-                "title": "Mean Of New HIV Infections Per 1000 Uninfected Population"
+                "title": "Mean Per 1000 Uninfected Population"
             },
             "scale":{"scheme": "magma", "reverse": true}
         }
@@ -52,6 +52,9 @@
         },
         "axis": {
             "domain": false
+        },
+        "legend": {
+            "titleAlign": "center"
         }
     }
 }
