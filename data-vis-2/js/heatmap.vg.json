@@ -42,7 +42,9 @@
             "legend": {
                 "title": "Mean Of New HIV Infections Per 1000 Uninfected Population",
                 "direction": "horizontal",
-                "orient": "bottom-left"
+                "orient": "none",
+                "legendX": -35,
+                "legendY": 420
             },
             "scale":{"scheme": "magma", "reverse": true}
         }
