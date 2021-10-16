@@ -30,7 +30,7 @@
             "groupby": ["Period", "Gender"]
         }
     ],
-    "mark": {"type": "rect", "stroke":"lightgray", "thickness": 30, "cursor": "pointer"},
+    "mark": {"type": "rect", "stroke":"lightgray", "cursor": "pointer"},
     "encoding": {
         "x": {
             "field": "Period",
@@ -70,12 +70,12 @@
               {
                 "param": "select",
                 "empty": false,
-                "value": 2
+                "value": 3
               },
               {
                 "param": "highlight",
                 "empty": false,
-                "value": 1
+                "value": 2
               }
             ],
             "value": 0
