@@ -12,6 +12,13 @@
     "data": {
         "url": "https://raw.githubusercontent.com/lchu0017/FIT3179/main/data-vis-2/data/newHivInfections.csv"
     },
+    "params": [
+        {
+          "name": "highlight",
+          "select": {"type": "point", "on": "mouseover"}
+        },
+        {"name": "select", "select": "point"}
+    ],
     "transform": [
         {"filter": "(datum.Tooltip != '<0.01') || (datum.Tooltip != 'No data')"},
         {
@@ -23,7 +30,7 @@
             "groupby": ["Period", "Gender"]
         }
     ],
-    "mark": "rect",
+    "mark": {"type": "rect", "stroke":"lightgray", "thickness": 30, "cursor": "pointer"},
     "encoding": {
         "x": {
             "field": "Period",
@@ -53,7 +60,26 @@
             {"field": "Gender", "type": "nominal", "title": "Gender"},
             {"field": "Period", "type": "ordinal", "title": "Year"},
             {"field": "gender_mean", "type": "quantitative", "title": "Mean"}
-        ]
+        ],
+        "fillOpacity": {
+            "condition": {"param": "select", "value": 1},
+            "value": 0.3
+          },
+          "strokeWidth": {
+            "condition": [
+              {
+                "param": "select",
+                "empty": false,
+                "value": 2
+              },
+              {
+                "param": "highlight",
+                "empty": false,
+                "value": 1
+              }
+            ],
+            "value": 0
+          }
     },
     "config": {
         "view": {
